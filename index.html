@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="videojs-contrib-ads.css" />
+    <link rel="stylesheet" href="videojs.ima.css" />
+
+    <style>
+        .floating {
+            position: fixed !important;
+            bottom: 0;
+            right: 0;
+            width: 400px !important;
+            height: 300px !important;
+            /* padding: 5px; */
+            margin-right: 3px;
+            margin-bottom: 3px;
+        }
+
+        #video-container {
+            width: 640px;
+            height: 480px;
+            display: inline-block;
+        }
+
+        #mrss-video {
+            width: 100%;
+            height: 100%;
+            /* height: auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CLIENT CONTENT</h1>
+    <h6>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ex porta, imperdiet diam sit amet,
+        congue ligula. Mauris pretium commodo imperdiet. Maecenas et tincidunt metus. Nunc purus augue, porta ac turpis
+        sed, posuere euismod tortor. Aliquam erat volutpat. Mauris id feugiat dolor. Sed dapibus euismod metus, ac
+        eleifend risus cursus at. Praesent consequat arcu vel velit elementum, eget egestas nisl placerat. Vestibulum
+        vestibulum sapien velit, id lacinia nunc congue ut. Aenean laoreet sapien sit amet dui tincidunt porta. Aenean
+        fringilla libero dolor, eget convallis nibh laoreet id. Donec maximus sollicitudin tellus vel semper. Curabitur
+        volutpat dui quis urna placerat auctor.
+
+        Vivamus ut ipsum sed ex tempus porttitor ac ac turpis. Sed in scelerisque purus, nec pretium tellus. Nullam vel
+        egestas libero. Duis tempor luctus leo, sed suscipit justo accumsan ac. Praesent aliquam diam in mattis finibus.
+        Nullam hendrerit mauris vitae felis mollis vulputate. Ut malesuada dolor a nibh interdum vulputate. In nisi
+        erat, mattis id tellus at, interdum dictum eros. Duis efficitur finibus libero sed egestas. Donec ullamcorper
+        sed tortor vel interdum. Vestibulum sed magna massa.
+
+        Cras scelerisque metus et erat hendrerit, sed ultrices purus consectetur. Nam vel tempor turpis. Nam aliquet
+        vulputate elit et sodales. Sed hendrerit enim et augue ultrices, a ultrices libero sagittis. Morbi mollis metus
+        pulvinar massa finibus tempor. Nunc accumsan mollis augue, sit amet faucibus urna vestibulum eget. Proin eget
+        finibus sapien. In vitae tellus eget nisi sodales feugiat eu euismod sem. Curabitur ac faucibus nulla. Nam
+        dictum vulputate nisl pretium posuere. Morbi vitae sodales quam. Vestibulum vel pretium velit, sit amet euismod
+        tortor. Quisque eget eros eu sapien convallis posuere.
+    </h6>
+    <h6>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ex porta, imperdiet diam sit amet,
+        congue ligula. Mauris pretium commodo imperdiet. Maecenas et tincidunt metus. Nunc purus augue, porta ac turpis
+        sed, posuere euismod tortor. Aliquam erat volutpat. Mauris id feugiat dolor. Sed dapibus euismod metus, ac
+        eleifend risus cursus at. Praesent consequat arcu vel velit elementum, eget egestas nisl placerat. Vestibulum
+        vestibulum sapien velit, id lacinia nunc congue ut. Aenean laoreet sapien sit amet dui tincidunt porta. Aenean
+        fringilla libero dolor, eget convallis nibh laoreet id. Donec maximus sollicitudin tellus vel semper. Curabitur
+        volutpat dui quis urna placerat auctor.
+
+        Vivamus ut ipsum sed ex tempus porttitor ac ac turpis. Sed in scelerisque purus, nec pretium tellus. Nullam vel
+        egestas libero. Duis tempor luctus leo, sed suscipit justo accumsan ac. Praesent aliquam diam in mattis finibus.
+        Nullam hendrerit mauris vitae felis mollis vulputate. Ut malesuada dolor a nibh interdum vulputate. In nisi
+        erat, mattis id tellus at, interdum dictum eros. Duis efficitur finibus libero sed egestas. Donec ullamcorper
+        sed tortor vel interdum. Vestibulum sed magna massa.
+
+        Cras scelerisque metus et erat hendrerit, sed ultrices purus consectetur. Nam vel tempor turpis. Nam aliquet
+        vulputate elit et sodales. Sed hendrerit enim et augue ultrices, a ultrices libero sagittis. Morbi mollis metus
+        pulvinar massa finibus tempor. Nunc accumsan mollis augue, sit amet faucibus urna vestibulum eget. Proin eget
+        finibus sapien. In vitae tellus eget nisi sodales feugiat eu euismod sem. Curabitur ac faucibus nulla. Nam
+        dictum vulputate nisl pretium posuere. Morbi vitae sodales quam. Vestibulum vel pretium velit, sit amet euismod
+        tortor. Quisque eget eros eu sapien convallis posuere.
+    </h6>
+    <h6>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ex porta, imperdiet diam sit amet,
+        congue ligula. Mauris pretium commodo imperdiet. Maecenas et tincidunt metus. Nunc purus augue, porta ac turpis
+        sed, posuere euismod tortor. Aliquam erat volutpat. Mauris id feugiat dolor. Sed dapibus euismod metus, ac
+        eleifend risus cursus at. Praesent consequat arcu vel velit elementum, eget egestas nisl placerat. Vestibulum
+        vestibulum sapien velit, id lacinia nunc congue ut. Aenean laoreet sapien sit amet dui tincidunt porta. Aenean
+        fringilla libero dolor, eget convallis nibh laoreet id. Donec maximus sollicitudin tellus vel semper. Curabitur
+        volutpat dui quis urna placerat auctor.
+
+        Vivamus ut ipsum sed ex tempus porttitor ac ac turpis. Sed in scelerisque purus, nec pretium tellus. Nullam vel
+        egestas libero. Duis tempor luctus leo, sed suscipit justo accumsan ac. Praesent aliquam diam in mattis finibus.
+        Nullam hendrerit mauris vitae felis mollis vulputate. Ut malesuada dolor a nibh interdum vulputate. In nisi
+        erat, mattis id tellus at, interdum dictum eros. Duis efficitur finibus libero sed egestas. Donec ullamcorper
+        sed tortor vel interdum. Vestibulum sed magna massa.
+
+        Cras scelerisque metus et erat hendrerit, sed ultrices purus consectetur. Nam vel tempor turpis. Nam aliquet
+        vulputate elit et sodales. Sed hendrerit enim et augue ultrices, a ultrices libero sagittis. Morbi mollis metus
+        pulvinar massa finibus tempor. Nunc accumsan mollis augue, sit amet faucibus urna vestibulum eget. Proin eget
+        finibus sapien. In vitae tellus eget nisi sodales feugiat eu euismod sem. Curabitur ac faucibus nulla. Nam
+        dictum vulputate nisl pretium posuere. Morbi vitae sodales quam. Vestibulum vel pretium velit, sit amet euismod
+        tortor. Quisque eget eros eu sapien convallis posuere.
+    </h6>
+    <div id="video-container-wrapper">
+        <div id="video-container">
+            <video id="mrss-video" class="video-js vjs-default-skin vjs-big-play-centered">
+                <!-- <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"> -->
+            </video>
+        </div>
+    </div>
+
+
+    <button id="adBreakBtn">Request Ad Break</button>
+    <button id="toggle-view">Toggle View</button>
+
+    <h6>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ex porta, imperdiet diam sit amet,
+        congue ligula. Mauris pretium commodo imperdiet. Maecenas et tincidunt metus. Nunc purus augue, porta ac turpis
+        sed, posuere euismod tortor. Aliquam erat volutpat. Mauris id feugiat dolor. Sed dapibus euismod metus, ac
+        eleifend risus cursus at. Praesent consequat arcu vel velit elementum, eget egestas nisl placerat. Vestibulum
+        vestibulum sapien velit, id lacinia nunc congue ut. Aenean laoreet sapien sit amet dui tincidunt porta. Aenean
+        fringilla libero dolor, eget convallis nibh laoreet id. Donec maximus sollicitudin tellus vel semper. Curabitur
+        volutpat dui quis urna placerat auctor.
+
+        Vivamus ut ipsum sed ex tempus porttitor ac ac turpis. Sed in scelerisque purus, nec pretium tellus. Nullam vel
+        egestas libero. Duis tempor luctus leo, sed suscipit justo accumsan ac. Praesent aliquam diam in mattis finibus.
+        Nullam hendrerit mauris vitae felis mollis vulputate. Ut malesuada dolor a nibh interdum vulputate. In nisi
+        erat, mattis id tellus at, interdum dictum eros. Duis efficitur finibus libero sed egestas. Donec ullamcorper
+        sed tortor vel interdum. Vestibulum sed magna massa.
+
+        Cras scelerisque metus et erat hendrerit, sed ultrices purus consectetur. Nam vel tempor turpis. Nam aliquet
+        vulputate elit et sodales. Sed hendrerit enim et augue ultrices, a ultrices libero sagittis. Morbi mollis metus
+        pulvinar massa finibus tempor. Nunc accumsan mollis augue, sit amet faucibus urna vestibulum eget. Proin eget
+        finibus sapien. In vitae tellus eget nisi sodales feugiat eu euismod sem. Curabitur ac faucibus nulla. Nam
+        dictum vulputate nisl pretium posuere. Morbi vitae sodales quam. Vestibulum vel pretium velit, sit amet euismod
+        tortor. Quisque eget eros eu sapien convallis posuere.
+    </h6>
+    <h6>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ex porta, imperdiet diam sit amet,
+        congue ligula. Mauris pretium commodo imperdiet. Maecenas et tincidunt metus. Nunc purus augue, porta ac turpis
+        sed, posuere euismod tortor. Aliquam erat volutpat. Mauris id feugiat dolor. Sed dapibus euismod metus, ac
+        eleifend risus cursus at. Praesent consequat arcu vel velit elementum, eget egestas nisl placerat. Vestibulum
+        vestibulum sapien velit, id lacinia nunc congue ut. Aenean laoreet sapien sit amet dui tincidunt porta. Aenean
+        fringilla libero dolor, eget convallis nibh laoreet id. Donec maximus sollicitudin tellus vel semper. Curabitur
+        volutpat dui quis urna placerat auctor.
+
+        Vivamus ut ipsum sed ex tempus porttitor ac ac turpis. Sed in scelerisque purus, nec pretium tellus. Nullam vel
+        egestas libero. Duis tempor luctus leo, sed suscipit justo accumsan ac. Praesent aliquam diam in mattis finibus.
+        Nullam hendrerit mauris vitae felis mollis vulputate. Ut malesuada dolor a nibh interdum vulputate. In nisi
+        erat, mattis id tellus at, interdum dictum eros. Duis efficitur finibus libero sed egestas. Donec ullamcorper
+        sed tortor vel interdum. Vestibulum sed magna massa.
+
+        Cras scelerisque metus et erat hendrerit, sed ultrices purus consectetur. Nam vel tempor turpis. Nam aliquet
+        vulputate elit et sodales. Sed hendrerit enim et augue ultrices, a ultrices libero sagittis. Morbi mollis metus
+        pulvinar massa finibus tempor. Nunc accumsan mollis augue, sit amet faucibus urna vestibulum eget. Proin eget
+        finibus sapien. In vitae tellus eget nisi sodales feugiat eu euismod sem. Curabitur ac faucibus nulla. Nam
+        dictum vulputate nisl pretium posuere. Morbi vitae sodales quam. Vestibulum vel pretium velit, sit amet euismod
+        tortor. Quisque eget eros eu sapien convallis posuere.
+    </h6>
+    <h6>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ex porta, imperdiet diam sit amet,
+        congue ligula. Mauris pretium commodo imperdiet. Maecenas et tincidunt metus. Nunc purus augue, porta ac turpis
+        sed, posuere euismod tortor. Aliquam erat volutpat. Mauris id feugiat dolor. Sed dapibus euismod metus, ac
+        eleifend risus cursus at. Praesent consequat arcu vel velit elementum, eget egestas nisl placerat. Vestibulum
+        vestibulum sapien velit, id lacinia nunc congue ut. Aenean laoreet sapien sit amet dui tincidunt porta. Aenean
+        fringilla libero dolor, eget convallis nibh laoreet id. Donec maximus sollicitudin tellus vel semper. Curabitur
+        volutpat dui quis urna placerat auctor.
+
+        Vivamus ut ipsum sed ex tempus porttitor ac ac turpis. Sed in scelerisque purus, nec pretium tellus. Nullam vel
+        egestas libero. Duis tempor luctus leo, sed suscipit justo accumsan ac. Praesent aliquam diam in mattis finibus.
+        Nullam hendrerit mauris vitae felis mollis vulputate. Ut malesuada dolor a nibh interdum vulputate. In nisi
+        erat, mattis id tellus at, interdum dictum eros. Duis efficitur finibus libero sed egestas. Donec ullamcorper
+        sed tortor vel interdum. Vestibulum sed magna massa.
+
+        Cras scelerisque metus et erat hendrerit, sed ultrices purus consectetur. Nam vel tempor turpis. Nam aliquet
+        vulputate elit et sodales. Sed hendrerit enim et augue ultrices, a ultrices libero sagittis. Morbi mollis metus
+        pulvinar massa finibus tempor. Nunc accumsan mollis augue, sit amet faucibus urna vestibulum eget. Proin eget
+        finibus sapien. In vitae tellus eget nisi sodales feugiat eu euismod sem. Curabitur ac faucibus nulla. Nam
+        dictum vulputate nisl pretium posuere. Morbi vitae sodales quam. Vestibulum vel pretium velit, sit amet euismod
+        tortor. Quisque eget eros eu sapien convallis posuere.
+    </h6>
+    <h6>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ex porta, imperdiet diam sit amet,
+        congue ligula. Mauris pretium commodo imperdiet. Maecenas et tincidunt metus. Nunc purus augue, porta ac turpis
+        sed, posuere euismod tortor. Aliquam erat volutpat. Mauris id feugiat dolor. Sed dapibus euismod metus, ac
+        eleifend risus cursus at. Praesent consequat arcu vel velit elementum, eget egestas nisl placerat. Vestibulum
+        vestibulum sapien velit, id lacinia nunc congue ut. Aenean laoreet sapien sit amet dui tincidunt porta. Aenean
+        fringilla libero dolor, eget convallis nibh laoreet id. Donec maximus sollicitudin tellus vel semper. Curabitur
+        volutpat dui quis urna placerat auctor.
+
+        Vivamus ut ipsum sed ex tempus porttitor ac ac turpis. Sed in scelerisque purus, nec pretium tellus. Nullam vel
+        egestas libero. Duis tempor luctus leo, sed suscipit justo accumsan ac. Praesent aliquam diam in mattis finibus.
+        Nullam hendrerit mauris vitae felis mollis vulputate. Ut malesuada dolor a nibh interdum vulputate. In nisi
+        erat, mattis id tellus at, interdum dictum eros. Duis efficitur finibus libero sed egestas. Donec ullamcorper
+        sed tortor vel interdum. Vestibulum sed magna massa.
+
+        Cras scelerisque metus et erat hendrerit, sed ultrices purus consectetur. Nam vel tempor turpis. Nam aliquet
+        vulputate elit et sodales. Sed hendrerit enim et augue ultrices, a ultrices libero sagittis. Morbi mollis metus
+        pulvinar massa finibus tempor. Nunc accumsan mollis augue, sit amet faucibus urna vestibulum eget. Proin eget
+        finibus sapien. In vitae tellus eget nisi sodales feugiat eu euismod sem. Curabitur ac faucibus nulla. Nam
+        dictum vulputate nisl pretium posuere. Morbi vitae sodales quam. Vestibulum vel pretium velit, sit amet euismod
+        tortor. Quisque eget eros eu sapien convallis posuere.
+    </h6>
+    <h6>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ex porta, imperdiet diam sit amet,
+        congue ligula. Mauris pretium commodo imperdiet. Maecenas et tincidunt metus. Nunc purus augue, porta ac turpis
+        sed, posuere euismod tortor. Aliquam erat volutpat. Mauris id feugiat dolor. Sed dapibus euismod metus, ac
+        eleifend risus cursus at. Praesent consequat arcu vel velit elementum, eget egestas nisl placerat. Vestibulum
+        vestibulum sapien velit, id lacinia nunc congue ut. Aenean laoreet sapien sit amet dui tincidunt porta. Aenean
+        fringilla libero dolor, eget convallis nibh laoreet id. Donec maximus sollicitudin tellus vel semper. Curabitur
+        volutpat dui quis urna placerat auctor.
+
+        Vivamus ut ipsum sed ex tempus porttitor ac ac turpis. Sed in scelerisque purus, nec pretium tellus. Nullam vel
+        egestas libero. Duis tempor luctus leo, sed suscipit justo accumsan ac. Praesent aliquam diam in mattis finibus.
+        Nullam hendrerit mauris vitae felis mollis vulputate. Ut malesuada dolor a nibh interdum vulputate. In nisi
+        erat, mattis id tellus at, interdum dictum eros. Duis efficitur finibus libero sed egestas. Donec ullamcorper
+        sed tortor vel interdum. Vestibulum sed magna massa.
+
+        Cras scelerisque metus et erat hendrerit, sed ultrices purus consectetur. Nam vel tempor turpis. Nam aliquet
+        vulputate elit et sodales. Sed hendrerit enim et augue ultrices, a ultrices libero sagittis. Morbi mollis metus
+        pulvinar massa finibus tempor. Nunc accumsan mollis augue, sit amet faucibus urna vestibulum eget. Proin eget
+        finibus sapien. In vitae tellus eget nisi sodales feugiat eu euismod sem. Curabitur ac faucibus nulla. Nam
+        dictum vulputate nisl pretium posuere. Morbi vitae sodales quam. Vestibulum vel pretium velit, sit amet euismod
+        tortor. Quisque eget eros eu sapien convallis posuere.
+    </h6>
+
+    <h6>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet ex porta, imperdiet diam sit amet,
+        congue ligula. Mauris pretium commodo imperdiet. Maecenas et tincidunt metus. Nunc purus augue, porta ac turpis
+        sed, posuere euismod tortor. Aliquam erat volutpat. Mauris id feugiat dolor. Sed dapibus euismod metus, ac
+        eleifend risus cursus at. Praesent consequat arcu vel velit elementum, eget egestas nisl placerat. Vestibulum
+        vestibulum sapien velit, id lacinia nunc congue ut. Aenean laoreet sapien sit amet dui tincidunt porta. Aenean
+        fringilla libero dolor, eget convallis nibh laoreet id. Donec maximus sollicitudin tellus vel semper. Curabitur
+        volutpat dui quis urna placerat auctor.
+
+        Vivamus ut ipsum sed ex tempus porttitor ac ac turpis. Sed in scelerisque purus, nec pretium tellus. Nullam vel
+        egestas libero. Duis tempor luctus leo, sed suscipit justo accumsan ac. Praesent aliquam diam in mattis finibus.
+        Nullam hendrerit mauris vitae felis mollis vulputate. Ut malesuada dolor a nibh interdum vulputate. In nisi
+        erat, mattis id tellus at, interdum dictum eros. Duis efficitur finibus libero sed egestas. Donec ullamcorper
+        sed tortor vel interdum. Vestibulum sed magna massa.
+
+        Cras scelerisque metus et erat hendrerit, sed ultrices purus consectetur. Nam vel tempor turpis. Nam aliquet
+        vulputate elit et sodales. Sed hendrerit enim et augue ultrices, a ultrices libero sagittis. Morbi mollis metus
+        pulvinar massa finibus tempor. Nunc accumsan mollis augue, sit amet faucibus urna vestibulum eget. Proin eget
+        finibus sapien. In vitae tellus eget nisi sodales feugiat eu euismod sem. Curabitur ac faucibus nulla. Nam
+        dictum vulputate nisl pretium posuere. Morbi vitae sodales quam. Vestibulum vel pretium velit, sit amet euismod
+        tortor. Quisque eget eros eu sapien convallis posuere.
+    </h6>
+
+    <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
+    <!-- <script src="videojs-playlist.js" ></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/videojs-playlist@4.3.1/dist/videojs-playlist.min.js"></script>
+    <script src="xmlToJson.js"></script>
+
+
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="videojs-contrib-ads.min.js"></script>
+    <script src="videojs.ima.min.js"></script>
+
+    <script>
+        var playerId = 'mrss-video';
+        var player;
+        var playListItemFinished = false;
+
+        function fetchMrssFeed(url, callback) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    const json = xmlToJson.parse(xhttp.responseText);
+                    console.log(json);
+                    callback(json);
+                }
+            };
+            xhttp.onerror = function () {
+                console.error('ERROR OCCURED WHILE FETCHING THE MRSS FEED');
+            }
+            xhttp.open("GET", url);
+            xhttp.send();
+        }
+
+        function extractPlaylist(mrssInfoObject) {
+            var items = mrssInfoObject.rss.channel.item, playlist = [];
+
+            items.forEach(function (item) {
+                let media = item['media:content'];
+                if (media.type === 'video/mp4' || media.type.indexOf('video/') === 0) {
+                    let playlistItem = {
+                        sources: [{ src: media.url, type: media.type }]
+                    };
+                    if (media['media:thumbnail'] && media['media:thumbnail'].url) {
+                        playlistItem.poster = media['media:thumbnail'].url;
+                    }
+
+                    playlist.push(playlistItem);
+
+                }
+            });
+            return playlist;
+        }
+
+        function initPlaylist(playlist) {
+            var videoJsOptions = {
+
+                autoplay: false,
+                controls: true,
+                controlBar: {
+                    // hide these two options
+                    pictureInPictureToggle: false,
+                    fullscreenToggle: false
+                },
+                userActions: {
+                    // disable the default functionality of fullscreen on doubleClick  
+                    doubleClick: false
+                }
+            };
+
+            player = videojs(playerId, videoJsOptions);
+
+            player.playlist(playlist);
+
+
+
+            player.one('play', function (e) {
+                console.log('video played event called....');
+                e.preventDefault();
+                setTimeout(() => {
+                    // player.pause();
+                    // player.controls(false);
+                    // requestAd();
+                }, 0);
+
+            });
+
+            player.on('contentended', function () {
+                console.log('video ended event called....');
+
+                console.log(player.playlist.currentIndex());
+                console.log(player.playlist.nextIndex());
+                playListItemFinished = true;
+                requestAd();
+            })
+
+        }
+
+
+        function initIMAPlugin() {
+
+            function onAdsManagerLoad() {
+                console.log('ads manager loaded....');
+
+                var events = [
+                    // google.ima.AdEvent.Type.CONTENT_PAUSE_REQUESTED,
+                    // google.ima.AdEvent.Type.CONTENT_RESUME_REQUESTED,
+                    // google.ima.AdEvent.Type.CLICK,
+                    // google.ima.AdEvent.Type.STARTED,
+                    // google.ima.AdEvent.Type.AD_PROGRESS,
+                    // google.ima.AdEvent.Type.AD_BUFFERING,
+                    // google.ima.AdEvent.Type.IMPRESSION,
+                    // google.ima.AdEvent.Type.PAUSED,
+                    // google.ima.AdEvent.Type.RESUMED,
+                    // google.ima.AdEvent.Type.FIRST_QUARTILE,
+                    // google.ima.AdEvent.Type.MIDPOINT,
+                    // google.ima.AdEvent.Type.THIRD_QUARTILE,
+                    // google.ima.AdEvent.Type.COMPLETE,
+                    // google.ima.AdEvent.Type.DURATION_CHANGE,
+                    // google.ima.AdEvent.Type.USER_CLOSE,
+                    // google.ima.AdEvent.Type.LOADED,
+                    // google.ima.AdEvent.Type.ALL_ADS_COMPLETED,
+                    // google.ima.AdEvent.Type.SKIPPED,
+                    // google.ima.AdEvent.Type.LINEAR_CHANGED,
+                    // google.ima.AdEvent.Type.SKIPPABLE_STATE_CHANGED,
+                    // google.ima.AdEvent.Type.AD_METADATA,
+                    // google.ima.AdEvent.Type.AD_BREAK_READY,
+                    // google.ima.AdEvent.Type.LOG,
+                    // google.ima.AdEvent.Type.VOLUME_CHANGED,
+                    // google.ima.AdEvent.Type.VOLUME_MUTED,
+                    // google.ima.AdEvent.Type.INTERACTION
+                ];
+
+                player.ima.addEventListener(google.ima.AdEvent.Type.COMPLETE, function () {
+                    console.log('ad complete event called....');
+
+                    setAdTag(null);
+                    // if (playListItemFinished) {
+                    //     player.playlist.next();
+                    //     playListItemFinished = false;
+                    // }
+                });
+            }
+
+            var IMAOptions = {
+                id: playerId,
+                // debug: true,
+                adsManagerLoadedCallback: onAdsManagerLoad
+            };
+            player.ima(IMAOptions);
+
+
+        }
+
+        function setAdTag(adTagUrl) {
+            player.ima.changeAdTag(adTagUrl);
+        }
+
+        function requestAd() {
+            if (playListItemFinished) {
+                var nextIndex = player.playlist.nextIndex();
+                player.playlist.currentItem(nextIndex);
+                player.ima.setContentWithAdTag(player.playlist.currentItem(),
+                    'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator='
+                );
+                // setAdTag('http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=');
+                player.ima.requestAds();
+            } else {
+
+                setAdTag('http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator=');
+                player.ima.requestAds();
+            }
+        }
+    </script>
+
+    <script>
+        fetchMrssFeed('http://192.168.0.107:8081/video-elephant-mrss.xml', function (mrss) {
+            console.log('fetched');
+            var playlist = extractPlaylist(mrss);
+            console.log(playlist);
+
+            initPlaylist(playlist);
+            initIMAPlugin();
+            var adBreakBtn = document.getElementById('adBreakBtn');
+            adBreakBtn.addEventListener('click', function () {
+                requestAd();
+            });
+        });
+    </script>
+
+    <script>
+        var videoContainer = document.getElementById('video-container');
+        var videoContainerWrapper = document.getElementById('video-container-wrapper');
+
+        function showVideoInFixedMode() {
+            videoContainer.classList.remove('floating')
+        }
+
+        function showVideoInFloatingMode() {
+            videoContainer.classList.add('floating')
+        }
+
+        // var toggleViewBtn = document.getElementById('toggle-view');
+        // toggleViewBtn.addEventListener('click', function () {
+        // });
+
+        window.addEventListener('load', function () {
+
+            var height = videoContainer.clientHeight;
+            var width = videoContainer.clientWidth;
+            videoContainerWrapper.style.height = height + 'px';
+            videoContainerWrapper.style.width = width + 'px';
+            videoContainerWrapper.style.background = '#d4d4d4';
+
+            function shouldVideoBeFloating() {
+                var rect = videoContainerWrapper.getBoundingClientRect();
+                var wHeight = window.innerHeight, wWidth = window.innerWidth;
+
+                if (rect.top < 0 && rect.bottom < rect.height / 4) {
+                    // complete within viewport
+                    return true;
+                }
+                return false;
+            }
+
+            window.addEventListener('scroll', function () {
+
+                if (shouldVideoBeFloating()) {
+                    showVideoInFloatingMode();
+                } else {
+                    showVideoInFixedMode();
+                }
+
+            });
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
